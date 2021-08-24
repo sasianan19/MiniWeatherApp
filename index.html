@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Check</title>
+</head>
+<body class="pageBody">
+    <div class="container"> <!--use grid to place for styling!-->
+        <div class="row box">
+            <div class="col-12">
+                <h1 class="welcome">Welcome!</h1>     
+                <p class="welcomeMsg">Check the weather by entering either a zip code or city name:</p>
+            </div>
+        </div>
+
+         <form class="formDiv"> <!--remember to style divs- add padding etc!-->
+            <div class="form row box">
+                <div id="input" class="form-group col-12">
+                    <input type="text" id="searchBox" class="form-control" placeHolder="ex) 80018 or Aurora">
+               </div>
+            </div>
+            <div class="form row box">
+                <div id="buttons" class="form-group col-12">
+                    <button type="button" class="btn" id="submitBtn" onclick="getWeather(event)">Submit</button>
+                    <button type="reset" class="btn" id="resetBtn">Reset</button>
+                </div>
+            </div>
+        </form>
+            
+        <div class="row">  
+            <div class="col-12 box"> Zipcode: 
+                 <p class="outputPrint" id="zip"></p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 box"> Temperature (°F):
+                <p class="outputPrint" id="temp"></p>
+                <img id="graphic">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 box"> City:
+                <p class="outputPrint" id="city"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
